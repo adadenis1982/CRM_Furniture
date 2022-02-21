@@ -1,0 +1,33 @@
+<div id="client">
+  <button><a href="/order">Все заказы</a></button>
+  <button><a href="/client/new">Новый клиент</a></button>
+  <div id="feedback" class="invalid-feedback"></div>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th scope='col'>#</th>
+        <th scope='col'>Имя</th>
+        <th scope='col'>Фамилия</th>
+        <th scope='col'>Почта</th>
+        <th scope='col'>Адрес</th>
+        <th scope='col'>Комментарий к клиенту</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each client}}
+        <tr>
+          <th scope='row'>{{this.number}}</th>
+          <td>{{this.firstname}}</td>
+          <td>{{this.lastname}}</td>
+          <td>{{this.email}}</td>
+          <td>{{this.address}}</td>
+          <td>{{this.time}} {{this.auth}}: {{this.comment}}</td>
+          <td><button class='orderButton' type='submit' data-entryid='{{this.id}}'>Заказы клиента</button></td>
+          <td><button class='editButton' type='submit' data-entryid='{{this.id}}'>Изменить</button></td>
+          <td><button class='deleteButton' type='delete' data-entryid='{{this.id}}'>Удалить</button></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+<script defer src='/js/client.js'></script>

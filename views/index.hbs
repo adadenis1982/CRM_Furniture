@@ -1,0 +1,15 @@
+<form id="formLogin" style="width: 50%" class="mx-auto">
+<h2>Необходимо войти в систему</h2>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Имя</label>
+    <input type="text" class="form-control" name="name" id="exampleInputName" aria-describedby="textHelp" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword" class="form-label">Пароль</label>
+    <input type="password" class="form-control" name="password" id="exampleInputPassword"
+          minlength="8" required>
+  </div>
+  <div id="feedback" class="invalid-feedback"></div>
+  <button type="submit" class="block button w-100 mar-t-2 mar-b-3 pad-2 round-1 text-c center">Войти в систему</button>
+</form>
+<script defer src='/js/index.js'></script>

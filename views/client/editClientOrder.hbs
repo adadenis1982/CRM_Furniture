@@ -1,0 +1,94 @@
+<form id="formEditOrder" style="width: 50%" class="mx-auto">
+  <h2>Изменить данные заказа</h2>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">статус</label>
+    <input
+      type="text"
+      class="form-control"
+      name="status"
+      id="exampleInputStatus"
+      aria-describedby="textHelp"
+      value={{order.status}}
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">количество мебели</label>
+    <input
+      type="text"
+      class="form-control"
+      name="number"
+      id="exampleInputNumber"
+      aria-describedby="textHelp"
+      value={{order.number}}
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">стоимость доставки</label>
+    <input
+      type="text"
+      class="form-control"
+      name="delivery_price"
+      id="exampleInputDelivery_price"
+      aria-describedby="textHelp"
+      value={{order.delivery_price}}
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">стоимость сборки</label>
+    <input
+      type="text"
+      class="form-control"
+      name="assembly_price"
+      id="exampleInputAssembly_price"
+      aria-describedby="textHelp"
+      value={{order.assembly_price}}
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">тип мебели</label>
+    <input
+      type="text"
+      class="form-control"
+      name="type"
+      id="exampleInputType"
+      value="{{furniture.type}}"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">стоимость мебели</label>
+    <input
+      type="text"
+      class="form-control"
+      name="price"
+      id="exampleInputPrice"
+      value="{{furniture.price}}"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">описание мебели</label>
+    <input
+      type="text"
+      class="form-control"
+      name="title"
+      id="exampleInputTtitle"
+      value="{{furniture.title}}"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">комментарий</label>
+    <input
+      type="text"
+      class="form-control"
+      name="comment"
+      id="exampleInputComment"
+      value="{{comment}}"
+    />
+  </div>
+  <div id="feedbackOrder" class="invalid-feedback"></div>
+  <button
+    type="submit"
+    class="block button w-100 mar-t-2 mar-b-3 pad-2 round-1 text-c center"
+    data-action="{{order.id}}"
+  >Изменить</button>
+</form>
+<script defer src='/js/editClientOrder.js'></script>

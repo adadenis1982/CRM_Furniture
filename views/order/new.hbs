@@ -1,0 +1,91 @@
+<form id="formNewOrder" style="width: 50%" class="mx-auto">
+  <h2>Данные заказа</h2>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Почта клиента</label>
+    <input
+      type="text"
+      class="form-control"
+      name="email"
+      id="exampleInputEmail"
+      aria-describedby="textHelp"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Статус</label>
+    <input
+      type="text"
+      class="form-control"
+      name="status"
+      id="exampleInputStatus"
+      aria-describedby="textHelp"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Количество мебели</label>
+    <input
+      type="text"
+      class="form-control"
+      name="number"
+      id="exampleInputNumber"
+      aria-describedby="textHelp"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Стоимость доставки</label>
+    <input
+      type="text"
+      class="form-control"
+      name="delivery_price"
+      id="exampleInputDelivery_price"
+      aria-describedby="textHelp"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Стоимость сборки</label>
+    <input
+      type="text"
+      class="form-control"
+      name="assembly_price"
+      id="exampleInputAssembly_price"
+      aria-describedby="textHelp"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Тип мебели</label>
+    <input type="text" class="form-control" name="type" id="exampleInputType" />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Цена</label>
+    <input
+      type="text"
+      class="form-control"
+      name="price"
+      id="exampleInputPrice"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Описание мебели</label>
+    <input
+      type="text"
+      class="form-control"
+      name="title"
+      id="exampleInputTitle"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Комментарий</label>
+    <input type="text" class="form-control" name="com" id="exampleInputСom" />
+  </div>
+  <div id="feedbackOrder" class="invalid-feedback"></div>
+  <button
+    type="submit"
+    class="block button w-100 mar-t-2 mar-b-3 pad-2 round-1 text-c center"
+    data-entryid="{{client.id}}"
+  >Добавить</button>
+</form>
+<script defer src="/js/newOrder.js"></script>

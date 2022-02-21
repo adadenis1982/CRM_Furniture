@@ -1,0 +1,26 @@
+<form id="formNew" style="width: 50%" class="mx-auto">
+<h2>Данные клиента</h2>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Имя</label>
+    <input type="text" class="form-control" name="firstname" id="exampleInputFirstName" aria-describedby="textHelp" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Фамилию</label>
+    <input type="text" class="form-control" name="lastname" id="exampleInputLastName" aria-describedby="textHelp" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Адрес</label>
+    <input type="text" class="form-control" name="address" id="exampleInputAddress" aria-describedby="textHelp" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Почта</label>
+    <input type="text" class="form-control" name="email" id="exampleInputEmail" aria-describedby="textHelp" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Комментарий</label>
+    <input type="text" class="form-control" name="comment" id="exampleInputLastName">
+  </div>
+  <div id="feedback" class="invalid-feedback"></div>
+  <button type="submit" class="block button w-100 mar-t-2 mar-b-3 pad-2 round-1 text-c center" data-entryid='{{client.id}}'>Добавить</button>
+</form>
+<script defer src='/js/newClient.js'></script>

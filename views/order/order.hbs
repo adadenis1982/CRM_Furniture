@@ -1,0 +1,55 @@
+<div id="order">
+  <button><a href="/client">Все клиенты</a></button>
+  <button><a href="/order/new">Новый заказ</a></button>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">№</th>
+        <th scope="col">Имя</th>
+        <th scope="col">Фамилия</th>
+        <th scope="col">Почта</th>
+        <th scope="col">Статус доставки</th>
+        <th scope="col">Количество мебели</th>
+        <th scope="col">Стоимость доставки</th>
+        <th scope="col">Стоимость сборки</th>
+        <th scope="col">Дата</th>
+        <th scope="col">Тип мебели</th>
+        <th scope="col">Цена</th>
+        <th scope="col">Описание мебели</th>
+        <th scope="col">Комментарий к заказу</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {{#each orders}}
+        <tr>
+          <th scope="row">{{this.num}}</th>
+          <td>{{this.firstname}}</td>{{! айди клиента }}
+          <td>{{this.lastname}}</td>{{! айди клиента }}
+          <td>{{this.email}}</td>{{! айди клиента }}
+          <td>{{this.status}}</td>{{! статус доставки }}
+          <td>{{this.number}}</td>{{! количество мебели }}
+          <td>{{this.delivery_price}}</td>{{! стоимость доставки мебели }}
+          <td>{{this.assembly_price}}</td>{{! стоимость сборки мебели }}
+          <td>{{this.date}}</td>{{! дата  }}
+          <td>{{this.type}}</td>{{! тип мебели  }}
+          <td>{{this.price}}</td>{{! стоимость мебели }}
+          <td>{{this.title}}</td>{{! описание мебели }}
+          <td>{{this.time}} {{this.auth}}: {{this.com}}</td>{{! комментарий к заказу }}
+
+          <td><button
+              class="editButton"
+              type="submit"
+              data-entryid="{{this.id}}"
+            >Изменить</button></td>
+          <td><button
+              class="deleteButton"
+              type="delete"
+              data-entryid="{{this.id}}"
+            >Удалить</button></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+<script defer src="/js/order.js"></script>
